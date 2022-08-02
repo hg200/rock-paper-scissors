@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getComputerSelection() {
+            let choice = ["rock", "paper", "scissors"];
+            return choice[Math.floor(Math.random() * 3)];
+        }
+        let playerSelection = prompt("enter your choice:");
+        let computerSelection = getComputerSelection();
+
+        function playRound() {
+            let result = "";
+            if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper") {
+                result = "won";
+                alert(result);
+            } else if (playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock") {
+                result = "lose";
+                alert(result);
+            } else if (playerSelection === computerSelection) {
+                result = "draw";
+                alert(result);
+            } else {
+                alert("enter valid choice!");
+            }
+            return result;
+        }
+        playRound();
+    </script>
+</body>
+
+</html>
