@@ -33,7 +33,29 @@
             }
             return result;
         }
-        playRound();
+        console.log(playRound());
+
+        function game() {
+            let playerScore = 0;
+            let computerScore = 0;
+            for (let i = 0; i < 5; i++) {
+                playRound();
+            }
+            if (playRound === "won") {
+                playerScore++;
+            } else if (playRound === "lose") {
+                computerScore++;
+            } else {
+                playerScore += 0;
+                computerScore += 0;
+            }
+
+            if (playerScore > computerScore) {
+                alert(`you won by ${playerScore} to ${computerScore}`)
+            } else {
+                alert(`you lost by ${playerScore} to ${computerScore}`)
+            }
+        }
     </script>
 </body>
 
