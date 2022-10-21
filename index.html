@@ -11,14 +11,16 @@
 <body>
     <script>
         function getComputerSelection() {
-            let choice = ["rock", "paper", "scissors"];
+            var choice = ["rock", "paper", "scissors"];
             return choice[Math.floor(Math.random() * 3)];
         }
-        let playerSelection = prompt("enter your choice:");
-        let computerSelection = getComputerSelection();
 
-        function playRound() {
-            let result = "";
+
+        function playRound(playerSelection, computerSelection) {
+            var playerSelection = prompt("enter your choice:");
+            var computerSelection = getComputerSelection();
+
+            var result = "";
             if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper") {
                 result = "won";
                 alert(result);
@@ -33,29 +35,25 @@
             }
             return result;
         }
-        console.log(playRound());
 
         function game() {
-            let playerScore = 0;
-            let computerScore = 0;
+            var playerScore = 0;
+            var computerScore = 0;
             for (let i = 0; i < 5; i++) {
                 playRound();
+                if (playRound === "won") {
+                    playerScore += 1;
+                } else if (playRound === "lose") {
+                    computerScore += 1;
+                }
             }
-            if (playRound === "won") {
-                playerScore++;
-            } else if (playRound === "lose") {
-                computerScore++;
-            } else {
-                playerScore += 0;
-                computerScore += 0;
-            }
-
             if (playerScore > computerScore) {
                 alert(`you won by ${playerScore} to ${computerScore}`)
             } else {
                 alert(`you lost by ${playerScore} to ${computerScore}`)
             }
         }
+        game();
     </script>
 </body>
 
