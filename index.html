@@ -9,9 +9,18 @@
 </head>
 
 <body>
+    <button id="rock" onclick="playRound()">rock</button>
+    <button id="paper" onclick="playRound()">paper</button>
+    <button id="scissors" onclick="playRound()">scissors</button>
     <script>
+        var rock = document.getElementById("#rock");
+        var paper = document.getElementById("#paper");
+        var scissors = document.getElementById("#scissors");
+
+        var choice = document.getElementsByTagName("button");
+
         function getComputerSelection() {
-            var choice = ["rock", "paper", "scissors"];
+            //  var choice = ["rock", "paper", "scissors"];
             return choice[Math.floor(Math.random() * 3)];
         }
 
@@ -53,7 +62,6 @@
                 alert(`you lost by ${playerScore} to ${computerScore}`)
             }
         }
-        game();
     </script>
 </body>
 
