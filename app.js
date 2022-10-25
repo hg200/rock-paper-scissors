@@ -5,8 +5,8 @@ let playerScore = 0;
 
 const pScore = document.querySelector(".playerScore");
 const cScore = document.querySelector(".computerScore");
-
-
+const declaration = document.querySelector("declaration");
+const body = document.querySelector("body");
 
 
 function getComputerSelection() {
@@ -36,45 +36,26 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerSelection().toLowerCase();
 
-    //var result = "";
-    if (playerScore <= 5 && computerScore <= 5) {
+
+    if (playerScore <= 4 && computerScore <= 4) {
         if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
             pCount.innerText = `${playerScore}`;
-            // result = "won";
-            // alert(result);
+
         } else if (playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++;
             cCount.innerText = `${computerScore}`;
-            //result = "lose";
-            //alert(result);
+
         } else {
             return;
-            //result = "draw";
-            //alert(result);
-        } //else {
-        // alert("enter valid choice!");
-        //}
-        // return result;
+        }
+
     } else {
-        alert("game over!");
+        const reload = document.createElement("button");
+        reload.innerText = "RELOAD";
+        body.appendChild(reload);
+        reload.addEventListener("click", () => {
+            window.location.reload();
+        })
     }
 }
-
-/*function game() {
-    var playerScore = 0;
-    var computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        playRound();
-        if (playRound === "won") {
-            playerScore += 1;
-        } else if (playRound === "lose") {
-            computerScore += 1;
-        }
-    }
-    if (playerScore > computerScore) {
-        alert(`you won by ${playerScore} to ${computerScore}`)
-    } else {
-        alert(`you lost by ${playerScore} to ${computerScore}`)
-    }
-}*/
