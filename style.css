@@ -1,0 +1,47 @@
+body {
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 100px 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-image: url(./istockphoto-1140265911-170667a.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vh;
+}
+
+.btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+
+.score {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+button {
+    background-color: aqua;
+    color: black;
+    height: 50px;
+    width: 100px;
+    border-radius: 7%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.title {
+    color: aquamarine;
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: 600;
+}
