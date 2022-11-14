@@ -6,6 +6,7 @@
 
 body {
     color: var(--tertiary-clr);
+    font-size: 18px;
     height: 100%;
     width: 100vw;
     margin: 0;
@@ -48,13 +49,14 @@ button {
     height: 50px;
     width: 100px;
     border-radius: 7%;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .title {
     color: var(--tertiary-clr);
     font-weight: 800;
+    font-size: 22px;
 }
 
 .bold {
