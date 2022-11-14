@@ -1,5 +1,11 @@
+:root {
+    --main-clr: aqua;
+    --secondary-clr: black;
+    --tertiary-clr: aquamarine;
+}
+
 body {
-    color: white;
+    color: var(--tertiary-clr);
     height: 100%;
     width: 100vw;
     margin: 0;
@@ -37,8 +43,8 @@ body {
 }
 
 button {
-    background-color: aqua;
-    color: black;
+    background-color: var(--main-clr);
+    color: var(--secondary-clr);
     height: 50px;
     width: 100px;
     border-radius: 7%;
@@ -47,7 +53,7 @@ button {
 }
 
 .title {
-    color: aquamarine;
+    color: var(--tertiary-clr);
     font-weight: 800;
 }
 
