@@ -64,6 +64,6 @@ button {
 }
 
 button:hover {
-    background-color: aquamarine;
+    filter: brightness(50%);
     transform: translate(0px, 4px) scale(1);
 }
