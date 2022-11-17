@@ -62,3 +62,8 @@ button {
 .bold {
     font-weight: 600;
 }
+
+button:hover {
+    background-color: aquamarine;
+    transform: translate(0px, 4px) scale(1);
+}
