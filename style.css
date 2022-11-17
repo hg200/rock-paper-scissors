@@ -66,4 +66,5 @@ button {
 button:hover {
     filter: brightness(50%);
     transform: translate(0px, 4px) scale(1);
+    transition: 0.3s ease;
 }
